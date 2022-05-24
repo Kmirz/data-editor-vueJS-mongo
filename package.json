@@ -4,7 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5050"
+    "dbuild": "vite build --watch",
+    "preview": "vite preview --port 5050",
+    "devstart": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
