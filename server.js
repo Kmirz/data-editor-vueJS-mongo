@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static("dist"));
-app.use("/subscribers", subscribersRouter);
+// app.use("/subscribers", subscribersRouter);
 app.use("*", (req, res) => {
   res.sendFile(path.join("dist", "index.html"), { root: "./" });
 });
