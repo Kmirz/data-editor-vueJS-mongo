@@ -1,10 +1,9 @@
 require("dotenv").config();
-
-const cors = require("cors");
+const path = require("path");
 
 const express = require("express");
 const mongoose = require("mongoose");
-const subscribersRouter = require("./Routes/subscribers");
+const subscribersRouter = require("./app/Routes/subscribers");
 
 const app = express();
 
@@ -13,10 +12,12 @@ const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to Database"));
 
-app.use(cors());
 app.use(express.json());
 app.use(express.static("dist"));
 app.use("/subscribers", subscribersRouter);
+app.use("*", (req, res) => {
+  res.sendFile(path.join("dist", "index.html"), { root: "./" });
+});
 app.use(express.static("public"));
 
 app.listen(process.env.PORT || 3000, () => console.log("Server Started"));

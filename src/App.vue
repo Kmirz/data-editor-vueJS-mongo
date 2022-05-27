@@ -1,6 +1,5 @@
 <script setup>
 import Sidebar from "./components/Sidebar.vue";
-import * as bootstrap from "bootstrap";
 </script>
 
 <template>
@@ -12,10 +11,10 @@ import * as bootstrap from "bootstrap";
 
 <style lang="scss">
 :root {
-  --primary: red;
+  --primary: #9933ff;
   --primary-alt: #22c55e;
   --grey: #64748b;
-  --dark: black;
+  --dark: #1b1f3b;
   --dark-alt: #334155;
   --light: #f1f5f9;
   --sidebar-width: 300px;
@@ -24,7 +23,7 @@ import * as bootstrap from "bootstrap";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Fira sans", sans-serif;
   border-image-repeat: unset !important;
 }
 body {

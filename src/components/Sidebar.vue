@@ -1,7 +1,7 @@
 <template>
   <aside :class="[is_expanded ? 'is-expanded' : '']">
     <div class="logo">
-      <img src="/dndLogo.png" alt="Vue Logo" />
+      <img src="/pngfind.com-google-forms-png-5309946.png" alt="Vue Logo" />
     </div>
     <div class="menu-toggle-wrap">
       <button class="menu-toggle" @click="ToggleMenu">
